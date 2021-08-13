@@ -1,0 +1,24 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+body {
+    box-sizing: border-box;
+    font-family: $font-stack;
+    background-color: $background-color;
+    letter-spacing: $letter-spacing;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+    .testimonial {
+        @include testimonial;
+    }
+    .wrapper {
+        @include wrapper;
+    }
+    button {
+        display: none;
+      }
+      img:hover + button {
+        display: inline-block;
+      }
