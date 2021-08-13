@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+* {
+    box-sizing: border-box;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    background-color: #c3cfe2;
+}
+
+.testimonial {
+    border-radius: 5%;
+    background: linear-gradient(to bottom, white 70%, #686de0 70% 100%);
+    padding: 2%;
+    width: 28%;
+    height: auto;
+    line-height: 160%;
+    font-size: 120%;
+}
+
+.header {
+    background-color: white;
+    color:rgb(90, 90, 90);
+    opacity: 0.9;
+}
+
+img {
+   border-radius: 50%;
+   border: 5px solid white;
+   width: 40%;
+   height: auto;
+   margin-left: 30%;
+}
+
+.footer {
+    color: #fff;
+    background-color: #686de0;
+    text-align:center;    
+}
+
+.footer2 {
+    background-color: #686de0;
+    color: #c3cfe2;
+    font-size: 80%;
+}
