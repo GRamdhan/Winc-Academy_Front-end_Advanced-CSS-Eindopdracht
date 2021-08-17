@@ -31,78 +31,45 @@
         font-size: 80%;
     }
 }
-
-@mixin testimonial {
-    border-radius: 5%;
-    background: linear-gradient(to bottom, $background-text 70%, $footer-color 70% 100%);
-    padding: 2%;
-    width: 21%;
-    height: auto;
-    line-height: 160%;
-    letter-spacing:20%;
-    img {
-        border-radius: 50%;
-        border: 5px solid $background-text;
-        width: 40%;
-        height: auto;
-        margin-left: 30%;
-    }
-    .header {
-        background-color: $background-text;
-        color: $header-color;
-        opacity: 0.9;
-        font-size: 110%;
-        margin-top: -4%;
-    }
-    .footer {
-        color: $background-text;
-        background-color: $footer-color;
-        text-align:center;    
-    }      
-    .footer2 {
-        background-color: $footer-color;
-        color: $background-color;
-        font-size: 80%;
-    }
-}
-
 @mixin wrapper {
-    width: 100%;
-    height: auto;
-    
-    img {
-        width: 100%;
-        height: auto;
-        border-radius: 3%;
-        opacity:1;
-    }
-    button {
-        display: none;
-    }
-
-    
-    &:hover {
-        button {
-           display:inline-block;
-           position: absolute;
-           margin-left: 4.5cm; 
-           margin-top: 5cm;     
-        }
-        .grid-item {
-            transition: 5sec;
-            background-color: black; 
-            border-radius: 3%;
-        }
-        img {
-            transition:5s;
-            opacity: 0;
-        }
-    }
- 
-    .grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-gap: 2%;
+        width: 100%;
+      .container {
+        position: relative;
+        width: 100%;
+        &:hover .overlay {
+            opacity: 1;
+            transition: 5s;
+          }
+      }
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 3%;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        background-color: black;
+        border-radius: 3%;
+      }
+      
+      .button {
+        color: black;
+        font-size: 90%;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        text-align: center;
+      }
     }
-}

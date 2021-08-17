@@ -10,10 +10,9 @@ body {
     margin-bottom: 5%;
     margin-top: 2%;
 }
-    .testimonial {
+.testimonial {
         @include testimonial;
     }
-    .wrapper {
+.wrapper {
         @include wrapper;
     }
-    

@@ -56,42 +56,6 @@ body {
 }
 
 .wrapper {
-  width: 100%;
-  height: auto;
-}
-
-.wrapper img {
-  width: 100%;
-  height: auto;
-  border-radius: 3%;
-  opacity: 1;
-}
-
-.wrapper button {
-  display: none;
-}
-
-.wrapper:hover button {
-  display: inline-block;
-  position: absolute;
-  margin-left: 4.5cm;
-  margin-top: 5cm;
-}
-
-.wrapper:hover .grid-item {
-  -webkit-transition: 5sec;
-  transition: 5sec;
-  background-color: black;
-  border-radius: 3%;
-}
-
-.wrapper:hover img {
-  -webkit-transition: 5s;
-  transition: 5s;
-  opacity: 0;
-}
-
-.wrapper .grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -99,5 +63,46 @@ body {
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 2%;
+  width: 100%;
+}
+
+.wrapper .container {
+  position: relative;
+  width: 100%;
+}
+
+.wrapper .container:hover .overlay {
+  opacity: 1;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+
+.wrapper .image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.wrapper .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: black;
+  border-radius: 3%;
+}
+
+.wrapper .button {
+  color: black;
+  font-size: 90%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
