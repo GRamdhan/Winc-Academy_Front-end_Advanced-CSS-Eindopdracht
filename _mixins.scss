@@ -49,11 +49,17 @@
         grid-gap: 2%;
         width: 100%;
         @include responsive (mobile) {
-          display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-          grid-gap: 2%;
           width: 100%;
+        }
+        @include responsive (tablet) {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        }
+        @include responsive (desktop) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2%;
+        width: 100%;
         }
       .container {
         position: relative;
