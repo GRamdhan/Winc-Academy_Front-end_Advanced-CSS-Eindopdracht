@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
-  font-weight: 400;
   src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKcg72j00.woff2) format("woff2");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
@@ -11,7 +10,6 @@ body {
           box-sizing: border-box;
   font-family: Ubuntu, Helvetica, sans-serif;
   background-color: #c3cfe2;
-  letter-spacing: 0.5px;
   margin-bottom: 5%;
   margin-top: 2%;
 }
@@ -21,10 +19,9 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #fff), color-stop(70%, #686de0));
   background: linear-gradient(to bottom, #fff 70%, #686de0 70% 100%);
   padding: 2%;
-  width: 21%;
+  width: 18%;
   height: auto;
   line-height: 160%;
-  letter-spacing: 20%;
 }
 
 .testimonial img {
@@ -37,10 +34,10 @@ body {
 
 .testimonial .header {
   background-color: #fff;
-  color: #414040;
-  opacity: 0.9;
-  font-size: 110%;
+  color: #4e4d4d;
+  font-size: 90%;
   margin-top: -4%;
+  letter-spacing: normal;
 }
 
 .testimonial .footer {
@@ -66,18 +63,22 @@ body {
   width: 100%;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 360px) {
   .wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .wrapper {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     width: 100%;
   }
 }
@@ -86,7 +87,8 @@ body {
   .wrapper {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2%;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     width: 100%;
   }
 }
