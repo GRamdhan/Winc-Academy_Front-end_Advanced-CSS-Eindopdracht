@@ -31,12 +31,30 @@
         font-size: 80%;
     }
 }
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+      @media only screen and (max-width: 480px) { @content };
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 768px) { @content };
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1200px) { @content };
+  }
+}
 @mixin wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-gap: 2%;
         width: 100%;
+        @include responsive (mobile) {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-gap: 2%;
+          width: 100%;
+        }
       .container {
         position: relative;
         width: 100%;
@@ -71,6 +89,8 @@
         text-align: center;
       }
     }
+
+  
     
 @mixin social {
       position: fixed;
