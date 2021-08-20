@@ -73,8 +73,8 @@ body {
 
 .wrapper .container:hover .overlay {
   opacity: 1;
-  -webkit-transition: 5s;
-  transition: 5s;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .wrapper .image {
@@ -92,7 +92,7 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0;
-  background-color: black;
+  background-color: #201f1f;
   border-radius: 3%;
 }
 
@@ -105,60 +105,65 @@ body {
   text-align: center;
 }
 
-
 .social {
   position: fixed;
+  width: 50px;
   top: 50%;
-  right:0%;
-}
-span{
- display: none;
+  right: 0%;
 }
 
 .social a {
   display: block;
-  text-align: center;
   padding: 20px;
-  color: white;
-  font-size: 15px;
+  color: #fff;
+  font-size: 16px;
 }
 
-.fa:hover {
-  width: 128px;
-  margin-left:-115px;
+.social .social-item {
+  margin-left: 20px;
+  font-family: Ubuntu, Helvetica, sans-serif;
+}
+
+.social .fa {
+  text-decoration: none;
+  -webkit-transition: 1s ease-out;
   transition: 1s ease-out;
 }
-.fa {
-  padding: 10%;
-  font-size: 30%;
-  width: 25%;
-  height: auto;
-  text-align: center;
-  text-decoration: none;
+
+.social .fa:hover {
+  width: 128px;
+  margin-left: -115px;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
 }
-.fa-facebook {
+
+.social .fa-facebook {
   background: #3B5998;
-  color: white;
+  width: 180px;
+  height: auto;
 }
 
-.fa-twitter {
+.social .fa-twitter {
   background: #55ACEE;
-  color: white;
+  width: 180px;
+  height: auto;
 }
 
-.fa-google {
+.social .fa-google {
   background: #dd4b39;
-  color: white;
+  width: 180px;
+  height: auto;
 }
 
-.fa-linkedin {
+.social .fa-linkedin {
   background: #007bb5;
-  color: white;
+  width: 180px;
+  height: auto;
 }
 
-.fa-github {
+.social .fa-github {
   background-color: #333;
-  color: white;
+  width: 180px;
+  height: auto;
 }
-
 /*# sourceMappingURL=styles.css.map */

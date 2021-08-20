@@ -16,3 +16,6 @@ body {
 .wrapper {
         @include wrapper;
     }
+.social {
+        @include social;
+    }
